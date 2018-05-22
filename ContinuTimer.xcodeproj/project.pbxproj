@@ -13,6 +13,8 @@
 		C5FDC3231B1AF1D400C2CB03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5FDC3221B1AF1D400C2CB03 /* Images.xcassets */; };
 		C5FDC3261B1AF1D400C2CB03 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5FDC3241B1AF1D400C2CB03 /* LaunchScreen.xib */; };
 		C5FDC3321B1AF1D400C2CB03 /* ContinuTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FDC3311B1AF1D400C2CB03 /* ContinuTimerTests.swift */; };
+		C5FDC33E1B1AF1F800C2CB03 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FDC33D1B1AF1F800C2CB03 /* iAd.framework */; };
+		C5FDC3401B1AF3D300C2CB03 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FDC33F1B1AF3D300C2CB03 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 		C5FDC32B1B1AF1D400C2CB03 /* ContinuTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContinuTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5FDC3301B1AF1D400C2CB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5FDC3311B1AF1D400C2CB03 /* ContinuTimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinuTimerTests.swift; sourceTree = "<group>"; };
+		C5FDC33B1B1AF1E400C2CB03 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
+		C5FDC33D1B1AF1F800C2CB03 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		C5FDC33F1B1AF3D300C2CB03 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +48,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5FDC3401B1AF3D300C2CB03 /* AVFoundation.framework in Frameworks */,
+				C5FDC33E1B1AF1F800C2CB03 /* iAd.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +66,9 @@
 		C5FDC30D1B1AF1D400C2CB03 = {
 			isa = PBXGroup;
 			children = (
+				C5FDC33F1B1AF3D300C2CB03 /* AVFoundation.framework */,
+				C5FDC33D1B1AF1F800C2CB03 /* iAd.framework */,
+				C5FDC33B1B1AF1E400C2CB03 /* AddressBookUI.framework */,
 				C5FDC3181B1AF1D400C2CB03 /* ContinuTimer */,
 				C5FDC32E1B1AF1D400C2CB03 /* ContinuTimerTests */,
 				C5FDC3171B1AF1D400C2CB03 /* Products */,
@@ -156,11 +166,14 @@
 		C5FDC30E1B1AF1D400C2CB03 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "首藤典宏";
 				TargetAttributes = {
 					C5FDC3151B1AF1D400C2CB03 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = K6K7SR2DJ9;
 					};
 					C5FDC32A1B1AF1D400C2CB03 = {
 						CreatedOnToolsVersion = 6.2;
@@ -338,9 +351,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContinuTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,9 +366,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ContinuTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -407,6 +430,7 @@
 				C5FDC3371B1AF1D400C2CB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5FDC3381B1AF1D400C2CB03 /* Build configuration list for PBXNativeTarget "ContinuTimerTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +439,7 @@
 				C5FDC33A1B1AF1D400C2CB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
